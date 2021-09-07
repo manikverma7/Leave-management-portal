@@ -13,5 +13,7 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TASK_ASSIGNER_AMAN }}'
-          projectId: task-assigner-aman
+          firebaseServiceAccount: >-
+            ${{ secrets.FIREBASE_SERVICE_ACCOUNT_LEAVE_MANAGEMENT_PORTAL_2ECA3
+            }}
+          projectId: leave-management-portal-2eca3

@@ -1,14 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './front-page/header/header.component';
-import { DashboardComponent } from './front-page/dashboard/dashboard.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DashboardComponent } from './front-page/dashboard/dashboard.component'
 import { SidenavComponent } from './front-page/sidenav/sidenav.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
@@ -24,8 +24,11 @@ import { FrontPageComponent } from './front-page/front-page.component';
 import { environment} from 'src/environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule} from 'angularfire2/auth';
-import { AuthService } from './services/auth.service';
 import { HomeComponent } from './front-page/home/home.component';
+import { AuthService } from './sevices/auth.service';
+import { CreateLeaveComponent } from './create-leave/create-leave.component';
+import { EmployeesComponent } from './employees/employees.component';
+import { MaterialComponent } from './material/material.component';
 
 
 
@@ -44,6 +47,10 @@ import { HomeComponent } from './front-page/home/home.component';
     SidenavComponent,
     FrontPageComponent,
     HomeComponent,
+    CreateLeaveComponent,
+    EmployeesComponent,
+    MaterialComponent,
+ 
   
     
     
@@ -52,7 +59,6 @@ import { HomeComponent } from './front-page/home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     MatSidenavModule,
     MatToolbarModule,
     FormsModule,
@@ -67,6 +73,8 @@ import { HomeComponent } from './front-page/home/home.component';
     NgbModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
   
     
 
@@ -76,3 +84,4 @@ import { HomeComponent } from './front-page/home/home.component';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+

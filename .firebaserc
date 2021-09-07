@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "leave-management-portal-2eca3"
+  },
+  "targets": {
+    "leave-management-portal-2eca3": {
+      "hosting": {
+        "Admin-form": [
+          "leave-management-portal-2eca3"
+        ]
+      }
+    }
   }
 }
